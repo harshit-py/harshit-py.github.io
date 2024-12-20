@@ -1,4 +1,4 @@
-import { GitHub, Linkedin, Mail } from 'lucide-react';
+import { Github, Linkedin, Mail } from 'lucide-react';
 
 export const Hero = () => {
   return (
@@ -19,7 +19,7 @@ export const Hero = () => {
         <div className="flex space-x-6">
           <a href="https://github.com" target="_blank" rel="noopener noreferrer" 
              className="text-slate hover:text-accent transition-colors">
-            <GitHub size={24} />
+            <Github size={24} />
           </a>
           <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
              className="text-slate hover:text-accent transition-colors">
