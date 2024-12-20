@@ -37,7 +37,7 @@
     @apply bg-navy text-slate font-sans;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-mono text-accent;
+    @apply font-mono text-slate font-bold;
   }
 }
 

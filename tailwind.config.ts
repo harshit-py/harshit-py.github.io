@@ -19,9 +19,9 @@ export default {
     },
     extend: {
       colors: {
-        navy: "#F5F5F0", // Light cream/beige color
-        slate: "#4A5568", // Darker text color for contrast
-        accent: "#64FFDA",
+        navy: "#F5F5F0", // Light cream background
+        slate: "#2D3748", // Darker slate color for better text contrast
+        accent: "#0A66C2", // Professional blue accent color
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
