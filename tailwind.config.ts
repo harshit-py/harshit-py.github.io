@@ -19,7 +19,7 @@ export default {
     },
     extend: {
       colors: {
-        navy: "#0A192F",
+        navy: "#112240", // Lighter shade of navy
         slate: "#8892B0",
         accent: "#64FFDA",
         border: "hsl(var(--border))",
