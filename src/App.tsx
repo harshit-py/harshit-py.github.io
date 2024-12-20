@@ -1,21 +1,20 @@
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Navbar } from "./components/Navbar";
-import Index from "./pages/Index";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { Navbar } from './components/Navbar'
+import Index from './pages/Index'
+import Projects from './pages/Projects'
 
-const queryClient = new QueryClient();
-
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <BrowserRouter>
-      <div className="min-h-screen bg-navy">
+function App() {
+  return (
+    <Router>
+      <div className="min-h-screen bg-white">
         <Navbar />
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/projects" element={<Projects />} />
         </Routes>
       </div>
-    </BrowserRouter>
-  </QueryClientProvider>
-);
+    </Router>
+  )
+}
 
-export default App;
+export default App
