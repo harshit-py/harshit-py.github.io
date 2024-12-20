@@ -4,12 +4,12 @@ export const Hero = () => {
   return (
     <section className="min-h-screen flex items-center justify-center px-6 pt-20">
       <div className="max-w-4xl animate-fade-in">
-        <p className="font-mono text-[#6B46C1] mb-4">Hi, my name is</p>
-        <h1 className="text-4xl md:text-6xl font-bold text-[#1A1F2C] mb-4">
+        <h1 className="text-5xl md:text-7xl font-bold text-[#1A1F2C] mb-6">
           John Doe
         </h1>
+        <p className="font-mono text-[#6B46C1] mb-4">ML Engineer & Data Scientist</p>
         <h2 className="text-3xl md:text-5xl font-bold text-[#1A1F2C]/80 mb-6">
-          I build with AI & Data
+          Building with AI & Data
         </h2>
         <p className="text-lg text-[#1A1F2C]/80 mb-8 max-w-2xl">
           I'm a Machine Learning Engineer and Data Scientist pursuing my Master's degree. 
