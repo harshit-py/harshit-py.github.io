@@ -19,8 +19,8 @@ export default {
     },
     extend: {
       colors: {
-        navy: "#112240", // Lighter shade of navy
-        slate: "#8892B0",
+        navy: "#F5F5F0", // Light cream/beige color
+        slate: "#4A5568", // Darker text color for contrast
         accent: "#64FFDA",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
