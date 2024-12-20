@@ -19,42 +19,15 @@ export default {
     },
     extend: {
       colors: {
-        navy: "#FFFFFF", // Pure white background
-        slate: "#333333", // Dark gray for text
-        accent: "#0A66C2", // Professional blue accent color
+        background: "#F1F0FB", // Soft purple-gray background
+        foreground: "#1A1F2C", // Dark purple text
+        primary: "#6B46C1", // Rich purple for primary elements
+        secondary: "#D6BCFA", // Light purple for secondary elements
+        accent: "#805AD5", // Medium purple for accents
+        muted: "#E9D8FD", // Very light purple for muted elements
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-        },
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
-        },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
-        },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
-        },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-        },
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
-        },
-        card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
-        },
       },
       fontFamily: {
         mono: ["JetBrains Mono", "monospace"],
