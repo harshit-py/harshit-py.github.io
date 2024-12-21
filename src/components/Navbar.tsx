@@ -6,7 +6,6 @@ export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { name: 'Projects', path: '/projects' },
     { name: 'Notebooks', path: '/notebooks' },
     { name: 'Blog', path: '/blog' },
     { name: 'Resume', path: '/resume' },
@@ -15,9 +14,9 @@ export const Navbar = () => {
   return (
     <nav className="fixed w-full bg-white/90 backdrop-blur-sm z-50 px-6 py-4 border-b border-gray-200">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
-        <div className="font-mono text-[#6B46C1] text-xl">
+        <Link to="/" className="font-mono text-[#6B46C1] text-xl hover:text-[#805AD5] transition-colors">
           John Doe
-        </div>
+        </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-8">

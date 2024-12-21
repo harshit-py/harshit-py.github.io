@@ -17,18 +17,18 @@ const NetworkBackground = () => {
 
     // Create particles
     const particlesGeometry = new THREE.BufferGeometry();
-    const particlesCount = 500;
+    const particlesCount = 1000; // Increased for better visibility
     const posArray = new Float32Array(particlesCount * 3);
     
     for(let i = 0; i < particlesCount * 3; i++) {
-      posArray[i] = (Math.random() - 0.5) * 15;
+      posArray[i] = (Math.random() - 0.5) * 20; // Increased spread
     }
     
     particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
 
     // Create material with larger particles
     const particlesMaterial = new THREE.PointsMaterial({
-      size: 0.02,
+      size: 0.05, // Increased size
       color: '#6B46C1',
       transparent: true,
       opacity: 0.8,
@@ -60,15 +60,15 @@ const NetworkBackground = () => {
     const animate = () => {
       requestAnimationFrame(animate);
       
-      particlesMesh.rotation.x += 0.001;
-      particlesMesh.rotation.y += 0.001;
+      particlesMesh.rotation.x += 0.002; // Increased rotation speed
+      particlesMesh.rotation.y += 0.002;
 
       // Enhanced response to mouse movement
-      particlesMesh.rotation.x += mousePosition.current.y * 0.001;
-      particlesMesh.rotation.y += mousePosition.current.x * 0.001;
+      particlesMesh.rotation.x += mousePosition.current.y * 0.003;
+      particlesMesh.rotation.y += mousePosition.current.x * 0.003;
 
       // Add wave motion
-      particlesMesh.position.y = Math.sin(Date.now() * 0.001) * 0.2;
+      particlesMesh.position.y = Math.sin(Date.now() * 0.001) * 0.3;
       
       renderer.render(scene, camera);
     };
