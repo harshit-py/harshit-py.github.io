@@ -3,10 +3,12 @@ import NetworkBackground from '@/components/NetworkBackground'
 
 const Index = () => {
   return (
-    <div className="min-h-screen relative">
+    <main className="min-h-screen relative overflow-hidden">
       <NetworkBackground />
-      <Hero />
-    </div>
+      <div className="relative z-10">
+        <Hero />
+      </div>
+    </main>
   )
 }
 

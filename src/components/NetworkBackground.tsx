@@ -17,18 +17,18 @@ const NetworkBackground = () => {
 
     // Create particles
     const particlesGeometry = new THREE.BufferGeometry();
-    const particlesCount = 200; // Increased number of particles
+    const particlesCount = 500;
     const posArray = new Float32Array(particlesCount * 3);
     
     for(let i = 0; i < particlesCount * 3; i++) {
-      posArray[i] = (Math.random() - 0.5) * 10; // Increased spread
+      posArray[i] = (Math.random() - 0.5) * 15;
     }
     
     particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
 
-    // Create material with larger particles and better visibility
+    // Create material with larger particles
     const particlesMaterial = new THREE.PointsMaterial({
-      size: 0.01,
+      size: 0.02,
       color: '#6B46C1',
       transparent: true,
       opacity: 0.8,
@@ -41,7 +41,7 @@ const NetworkBackground = () => {
 
     camera.position.z = 5;
 
-    // Mouse move handler with enhanced sensitivity
+    // Mouse move handler
     const onMouseMove = (event: MouseEvent) => {
       mousePosition.current = {
         x: (event.clientX / window.innerWidth) * 2 - 1,
@@ -56,7 +56,7 @@ const NetworkBackground = () => {
       renderer.setSize(window.innerWidth, window.innerHeight);
     };
 
-    // Animation with enhanced movement
+    // Animation
     const animate = () => {
       requestAnimationFrame(animate);
       
@@ -67,23 +67,23 @@ const NetworkBackground = () => {
       particlesMesh.rotation.x += mousePosition.current.y * 0.001;
       particlesMesh.rotation.y += mousePosition.current.x * 0.001;
 
-      // Add slight wave motion
-      particlesMesh.position.y = Math.sin(Date.now() * 0.001) * 0.1;
+      // Add wave motion
+      particlesMesh.position.y = Math.sin(Date.now() * 0.001) * 0.2;
       
       renderer.render(scene, camera);
     };
 
-    // Add event listeners
     window.addEventListener('mousemove', onMouseMove);
     window.addEventListener('resize', handleResize);
     
     animate();
 
-    // Cleanup
     return () => {
       window.removeEventListener('mousemove', onMouseMove);
       window.removeEventListener('resize', handleResize);
-      containerRef.current?.removeChild(renderer.domElement);
+      if (containerRef.current?.contains(renderer.domElement)) {
+        containerRef.current.removeChild(renderer.domElement);
+      }
       particlesGeometry.dispose();
       particlesMaterial.dispose();
     };
