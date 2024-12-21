@@ -5,11 +5,11 @@ const Index = () => {
   return (
     <main className="min-h-screen relative overflow-hidden">
       <NetworkBackground />
-      <div className="relative z-10 min-h-screen">
+      <div className="relative z-10">
         <Hero />
       </div>
     </main>
-  )
-}
+  );
+};
 
-export default Index
+export default Index;
