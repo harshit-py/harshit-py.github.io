@@ -15,14 +15,14 @@ export const Navbar = () => {
   return (
     <nav className="fixed w-full bg-white/90 backdrop-blur-sm z-50 px-6 py-4 border-b border-gray-200">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
-        <Link to="/" className="font-mono text-[#0A66C2] text-xl">
-          ML.Engineer
+        <Link to="/" className="font-mono text-[#6B46C1] text-xl">
+          Portfolio
         </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-8">
           {navItems.map((item) => (
-            <Link key={item.name} to={item.path} className="text-[#333333] hover:text-[#0A66C2] transition-colors">
+            <Link key={item.name} to={item.path} className="nav-link">
               {item.name}
             </Link>
           ))}
@@ -30,7 +30,7 @@ export const Navbar = () => {
 
         {/* Mobile Navigation */}
         <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
-          {isOpen ? <X className="text-[#0A66C2]" /> : <Menu className="text-[#0A66C2]" />}
+          {isOpen ? <X className="text-[#6B46C1]" /> : <Menu className="text-[#6B46C1]" />}
         </button>
 
         {/* Mobile Menu */}
@@ -41,7 +41,7 @@ export const Navbar = () => {
                 <Link
                   key={item.name}
                   to={item.path}
-                  className="text-[#333333] hover:text-[#0A66C2] transition-colors"
+                  className="nav-link"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
