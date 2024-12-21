@@ -5,7 +5,7 @@ export const Hero = () => {
     <section className="min-h-screen flex items-center justify-center px-6 pt-20">
       <div className="max-w-4xl animate-fade-in">
         <h1 className="text-5xl md:text-7xl font-bold text-[#1A1F2C] mb-6">
-          John Doe
+          Harshit Saxena
         </h1>
         <p className="font-mono text-[#6B46C1] mb-4">ML Engineer & Data Scientist</p>
         <h2 className="text-3xl md:text-5xl font-bold text-[#1A1F2C]/80 mb-6">
