@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { Navbar } from './components/Navbar'
 import Index from './pages/Index'
+import Projects from './pages/Projects'
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <div className="pt-16"> {/* Add padding to account for fixed navbar */}
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/projects" element={<Projects />} />
           </Routes>
         </div>
       </div>
