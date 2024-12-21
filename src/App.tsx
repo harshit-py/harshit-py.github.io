@@ -5,11 +5,13 @@ import Index from './pages/Index'
 function App() {
   return (
     <Router>
-      <div className="min-h-screen">
+      <div className="min-h-screen relative">
         <Navbar />
-        <Routes>
-          <Route path="/" element={<Index />} />
-        </Routes>
+        <div className="pt-16"> {/* Add padding to account for fixed navbar */}
+          <Routes>
+            <Route path="/" element={<Index />} />
+          </Routes>
+        </div>
       </div>
     </Router>
   )

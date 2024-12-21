@@ -5,7 +5,7 @@ const Index = () => {
   return (
     <main className="min-h-screen relative overflow-hidden">
       <NetworkBackground />
-      <div className="relative z-10 pt-16">
+      <div className="relative z-10 min-h-screen">
         <Hero />
       </div>
     </main>
