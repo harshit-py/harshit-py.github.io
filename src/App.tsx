@@ -6,7 +6,7 @@ import Projects from './pages/Projects'
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-white">
+      <div className="min-h-screen bg-background">
         <Navbar />
         <Routes>
           <Route path="/" element={<Index />} />
