@@ -1,5 +1,6 @@
 import { Hero } from '@/components/Hero';
 import { ProjectCard } from '@/components/ProjectCard';
+import NetworkBackground from '@/components/NetworkBackground';
 
 const projects = [
   {
@@ -27,6 +28,7 @@ const projects = [
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <NetworkBackground />
       <Hero />
       
       <section className="py-20 px-6">
